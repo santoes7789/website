@@ -1,0 +1,39 @@
+.site-container {
+	width: 100vw;
+	text-align: center;
+	overflow: hidden;
+}
+
+.main-greeting {
+	margin: 20vh 0 0 0;
+	
+}
+
+.scrolling-text {
+	white-space: nowrap;
+	overflow: hidden; 
+	animation: scroll-left 5s linear infinite;
+}
+
+body {
+	background: black;
+	color: white;
+}
+
+h1 {
+	font-family: 'Fira Code';
+	font-size: 10rem;
+}
+
+p {
+	font-family: 'Fira Sans';
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
