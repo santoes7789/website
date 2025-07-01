@@ -1,27 +1,104 @@
 .site-container {
 	width: 100vw;
+	height: 100vh;
+
+	background: black;
+	color: white;
+
+	position: relative;
+
 	text-align: center;
 	overflow: hidden;
+
 }
 
-.main-greeting {
-	margin: 20vh 0 0 0;
-	
-}
-
-.scrolling-text {
-	white-space: nowrap;
-	overflow: hidden; 
-	animation: scroll-left 5s linear infinite;
-}
-
-body {
-	background: black;
+.hero {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
 	color: white;
 }
 
-h1 {
+.hero-background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: radial-gradient(circle at 275px 95%,
+			#FBBF24 0%,
+			#FDBA74 10%,
+			#60A5FA 40%,
+			#1E3A8A 100%);
+	/* background: linear-gradient(to bottom, #1E3A8A 0%, #3B82F6 40%, #FBBF24 100%); */
+	/* background: linear-gradient(to bottom, #FFFAF0 0%, #FFDAB9 30%, #87CEFA 100%); */
+	/* background: linear-gradient(to bottom, #FFDAB9, #87CEFA); */
+	/* background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%); */
+
+	animation: fadeIn 5s ease-in forwards;
+}
+
+.sub-text {
+	opacity: 0;
+	animation: fadeIn 0.4s 4s ease-in forwards;
+
+}
+
+.main-greeting {
+	margin: 0;
+	padding-top: 30vh;
+	opacity: 0;
+
+	transform: translateY(-130px);
+	animation:
+		fadeIn 1s 3s ease-in-out forwards,
+		slideInTop 1s 3s ease-in-out forwards;
+}
+
+.scrolling-text {
+	white-space: pre;
+	transform: translateX(100%);
+	animation:
+		slideInRight 1s 5s ease-out,
+		scroll-left 50s 6s linear infinite;
+}
+
+.sun {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+
+	position: absolute;
+	bottom: -5%;
+	left: 200px;
+
+	background: #fff4d6;
+	opacity: 0.4;
+
+	box-shadow:
+		0 0 20px #fff59d,
+		0 0 40px #fff176,
+		0 0 60px #ffca28,
+		0 0 80px #ff9800,
+		0 0 100px #f57c00;
+
+
+	transform: translateY(200px);
+
+	animation:
+		slideInTop 4s linear,
+		hover 1s 4s ease-in-out infinite alternate;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: 'Fira Code';
+}
+
+h1 {
 	font-size: 10rem;
 }
 
@@ -30,10 +107,45 @@ p {
 }
 
 @keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes hover {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(20px);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slideInRight {
+	to {
+		transform: translateX(0);
+
+	}
+}
+
+@keyframes slideInTop {
+	to {
+		transform: translateY(0);
+
+	}
 }
