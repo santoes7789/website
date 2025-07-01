@@ -1,3 +1,6 @@
+* {
+    user-select: none;
+}
 .site-container {
 	width: 100vw;
 	height: 100vh;
