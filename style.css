@@ -48,21 +48,21 @@
 	padding-top: 30vh;
 	opacity: 0;
 
-	transform: translateY(-130px);
+    translate: 0 -130px;
 	animation:
 		fadeIn 1s 3s ease-in-out forwards,
-		slideInTop 1s 3s ease-in-out forwards;
+		slideIn 1s 3s ease-in-out forwards;
 }
 
 .scrolling-text {
 	white-space: pre;
-	transform: translateX(100%);
+    translate: 100vw 0;
 	animation:
-		slideInRight 1s 6.5s ease-out,
-		scroll-left 50s 7.5s linear infinite;
+		slideIn 1s 6.5s ease-out,
+		scrollLeft 50s 7.5s linear infinite;
 }
 
-.sun {
+#sun {
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
@@ -81,11 +81,8 @@
 		0 0 80px #ff9800,
 		0 0 100px #f57c00;
 
-
-	transform: translateY(200px);
-
 	animation:
-		slideInTop 4s linear,
+		sun-slideIn 4s linear,
 		hover 1s 4s ease-in-out infinite alternate;
 }
 
@@ -107,23 +104,23 @@ p {
 	font-family: 'Lato';
 }
 
-@keyframes scroll-left {
+@keyframes scrollLeft {
 	0% {
-		transform: translateX(0);
+        translate: 0 0;
 	}
 
 	100% {
-		transform: translateX(-50%);
+        translate: -50% 0;
 	}
 }
 
 @keyframes hover {
 	0% {
-		transform: translateY(0);
+        translate: 0;
 	}
 
 	100% {
-		transform: translateY(20px);
+        translate: 0 20px;
 	}
 }
 
@@ -137,16 +134,16 @@ p {
 	}
 }
 
-@keyframes slideInRight {
-	to {
-		transform: translateX(0);
-
-	}
+@keyframes sun-slideIn {
+    0% {
+        translate: 0 200px;
+    }
+    100% { 
+        translate: 0 0;
+    }
 }
-
-@keyframes slideInTop {
+@keyframes slideIn {
 	to {
-		transform: translateY(0);
-
+        translate: 0;
 	}
 }

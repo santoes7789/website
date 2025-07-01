@@ -87,15 +87,38 @@ for (let i = 0; i <= morningRange[1] - morningRange[0]; i++) {
 countriesText.textContent = countriesText.textContent + " " + countriesText.textContent;
 
 //Setting up sun object
+let sunDragging = false;
+let sunOffsetX = 0;
+let sunOffsetY = 0;
 const sunObject = document.getElementById("sun");
 sunObject.addEventListener("mouseover", () => {
+    sunObject.style.cursor = "grab";
     sunObject.style.transform = "scale(1.1)";
 });
 sunObject.addEventListener("mouseout", () => {
     sunObject.style.transform = "scale(1)";
 });
 
-sunObject.addEventListener("mousedown", () => {
+sunObject.addEventListener("mousedown", (event) => {
+    console.log("Mouse down")
+    sunObject.style.animation = "none";
+    sunObject.style.cursor = "grabbing";
+    const sunDimensions = sunObject.getBoundingClientRect();
+    sunOffsetX = event.clientX - sunDimensions.left;
+    sunOffsetY = event.clientY - sunDimensions.top;
+    sunDragging = true;
+});
 
+sunObject.addEventListener("mouseup", () => {
+	sunObject.style.animation = "hover 1s ease-in-out infinite alternate";
+    sunObject.style.cursor = "grab";
+    sunDragging = false;
+});
+
+sunObject.addEventListener("mousemove", (event) => {
+    if (sunDragging) {
+        sunObject.style.left = `${event.clientX - sunOffsetX}px`;
+        sunObject.style.top = `${event.clientY - sunOffsetY}px`;
+    }
 });
 
