@@ -72,17 +72,30 @@ const countriesByUTC = [
 	// UTC−1
 	["Cape Verde", "Portugal (Azores)"],
 ];
-document.addEventListener("DOMContentLoaded", () => {
 
-	const countriesText = document.getElementById("morning-countries");
-	const UTCHour = new Date().getUTCHours();
-	const morningRange = [5, 10];
+//Setting up countries text
+const countriesText = document.getElementById("morning-countries");
+const UTCHour = new Date().getUTCHours();
+const morningRange = [5, 10];
 
-	for (let i = 0; i <= morningRange[1] - morningRange[0]; i++) {
-		for (let country of countriesByUTC[(24 + (morningRange[0] - UTCHour + i)) % 24]) {
-			countriesText.textContent += "     " + country;
-		}
-	}
+for (let i = 0; i <= morningRange[1] - morningRange[0]; i++) {
+    for (let country of countriesByUTC[(24 + (morningRange[0] - UTCHour + i)) % 24]) {
+        countriesText.textContent += "     " + country;
+    }
+}
 
-	countriesText.textContent = countriesText.textContent + " " + countriesText.textContent;
-})
+countriesText.textContent = countriesText.textContent + " " + countriesText.textContent;
+
+//Setting up sun object
+const sunObject = document.getElementById("sun");
+sunObject.addEventListener("mouseover", () => {
+    sunObject.style.transform = "scale(1.1)";
+});
+sunObject.addEventListener("mouseout", () => {
+    sunObject.style.transform = "scale(1)";
+});
+
+sunObject.addEventListener("mousedown", () => {
+
+});
+
