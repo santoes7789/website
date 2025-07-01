@@ -95,7 +95,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Fira Code';
+	font-family: 'Bebas Neue';
+    letter-spacing: 5px;
 }
 
 h1 {
@@ -103,7 +104,7 @@ h1 {
 }
 
 p {
-	font-family: 'Fira Sans';
+	font-family: 'Lato';
 }
 
 @keyframes scroll-left {
