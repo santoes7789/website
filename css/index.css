@@ -3,12 +3,18 @@
 	height: 100%;
 	position: absolute;
 	background: radial-gradient(circle at 275px 95%,
-			#FBBF24 0%,
-			#FDBA74 10%,
-			#60A5FA 40%,
-			#1E3A8A 100%);
+        #FBBF24 0%,
+        #FDBA74 10%,
+        #60A5FA 40%,
+        #1E3A8A 100%);
 
 	animation: fadeIn 2.5s ease-in forwards;
+}
+
+.hero-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .main-greeting {
@@ -63,4 +69,11 @@
 	animation:
 		sun-slideIn 3s ease,
 		hover 1s 3s ease-in-out infinite alternate;
+}
+
+.fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+}
+.slide-out {
+    animation: slideOut 1s ease-in-out forwards;
 }

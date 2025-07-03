@@ -85,3 +85,20 @@ for (let i = 0; i <= morningRange[1] - morningRange[0]; i++) {
 }
 
 countriesText.textContent = countriesText.textContent + " " + countriesText.textContent;
+
+
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", (event) => { 
+        event.preventDefault();
+        sun = document.getElementById("sun");
+        heroBackground = document.querySelector(".hero-background");
+        heroContent = document.querySelector(".hero-content");
+        heroBackground.classList.add("fade-out");
+        heroContent.classList.add("slide-out");
+        sun.style.animation = "sun-slideOut 1s ease-in-out forwards";
+
+        heroBackground.addEventListener("animationend", () => {
+            window.location.href = link.href;
+        });
+    }); 
+});

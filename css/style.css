@@ -69,6 +69,12 @@ p {
 	}
 }
 
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes sun-slideIn {
     0% {
         translate: 0 200px;
@@ -77,8 +83,19 @@ p {
         translate: 0 0;
     }
 }
+@keyframes sun-slideOut {
+    100% { 
+        translate: 0 200px;
+    }
+}
 @keyframes slideIn {
 	to {
         translate: 0;
 	}
+}
+
+@keyframes slideOut {
+    to {
+        translate: 100vw 0;
+    }
 }
