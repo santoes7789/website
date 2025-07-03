@@ -26,13 +26,14 @@ sunObject.addEventListener("mouseout", () => {
 });
 
 sunObject.addEventListener("mousedown", (event) => {
-    sunObject.style.animation = "none";
-    sunObject.style.cursor = "none";
-    document.body.style.cursor = "none";
-    const sunDimensions = sunObject.getBoundingClientRect();
-    sunOffsetX = event.clientX - sunDimensions.left;
-    sunOffsetY = event.clientY - sunDimensions.top;
-    sunDragging = true;
+    window.location.href = "about.html"
+    // sunObject.style.animation = "none";
+    // sunObject.style.cursor = "none";
+    // document.body.style.cursor = "none";
+    // const sunDimensions = sunObject.getBoundingClientRect();
+    // sunOffsetX = event.clientX - sunDimensions.left;
+    // sunOffsetY = event.clientY - sunDimensions.top;
+    // sunDragging = true;
 });
 
 document.addEventListener("mouseup", () => {

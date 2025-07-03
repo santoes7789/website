@@ -3,6 +3,10 @@
     position: relative;
 }
 
+html, body {
+    background-color: black;
+}
+
 .hero {
 	width: 100vw;
 	height: 100vh;
@@ -15,16 +19,6 @@
 	text-align: center;
 }
 
-.main-greeting {
-	margin: 0;
-	padding-top: 30vh;
-	opacity: 0;
-
-    translate: 0 -130px;
-	animation:
-		fadeIn 1s 3s ease-in-out forwards,
-		slideIn 1s 3s ease-in-out forwards;
-}
 
 
 h1,
