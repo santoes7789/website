@@ -8,12 +8,23 @@
 			#60A5FA 40%,
 			#1E3A8A 100%);
 
-	animation: fadeIn 5s ease-in forwards;
+	animation: fadeIn 2.5s ease-in forwards;
+}
+
+.main-greeting {
+	margin: 0;
+	padding-top: 30vh;
+	opacity: 0;
+
+    translate: 0 -130px;
+	animation:
+		fadeIn 1s 2s ease-in-out forwards,
+		slideIn 1s 2s ease-in-out forwards;
 }
 
 .sub-text {
 	opacity: 0;
-	animation: fadeIn 0.4s 5s ease-in forwards;
+	animation: fadeIn 0.4s 3.25s ease-in forwards;
 
 }
 
@@ -21,8 +32,8 @@
 	white-space: pre;
     translate: 100vw 0;
 	animation:
-		slideIn 1s 6.5s ease-out,
-		scrollLeft 50s 7.5s linear infinite;
+		slideIn 1s 4s ease-out,
+		scrollLeft 50s 5s linear infinite;
 }
 
 .tag {
@@ -50,6 +61,6 @@
 
     z-index: 5;
 	animation:
-		sun-slideIn 4s linear,
-		hover 1s 4s ease-in-out infinite alternate;
+		sun-slideIn 3s ease,
+		hover 1s 3s ease-in-out infinite alternate;
 }
