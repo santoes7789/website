@@ -3,10 +3,10 @@
 	height: 100%;
 	position: absolute;
 
-    background: radial-gradient(circle at 275px 95%, 
-        #2c2c54 0%, 
-        #1e1e3f 40%, 
-        #000014 100%);
+	background: radial-gradient(circle at 275px 95%,
+			#2c2c54 0%,
+			#1e1e3f 40%,
+			#000014 100%);
 
 	animation: fadeIn 2.5s ease-in forwards;
 }
@@ -17,7 +17,7 @@
 	padding-top: 30vh;
 	opacity: 0;
 
-    translate: 0 -130px;
+	translate: 0 -130px;
 	animation:
 		fadeIn 1s 2s ease-in-out forwards,
 		slideIn 1s 2s ease-in-out forwards;
@@ -26,6 +26,11 @@
 .sub-text {
 	opacity: 0;
 	animation: fadeIn 0.4s 3.25s ease-in forwards;
+}
+
+.subber-text {
+	opacity: 0;
+	animation: fadeIn 0.4s 4.75s ease-in forwards;
 }
 
 #sun {
@@ -40,11 +45,11 @@
 	background: #ffffffee;
 	opacity: 0.7;
 
-    box-shadow:
-        0 0 20px 10px #ffffff55,
-        0 0 60px 20px #ffffff22,
-        0 0 100px 200px #cecece22,
-        inset -5px -5px 10px #e0e0e0;
+	box-shadow:
+		0 0 20px 10px #ffffff55,
+		0 0 60px 20px #ffffff22,
+		0 0 100px 200px #cecece22,
+		inset -5px -5px 10px #e0e0e0;
 
 	animation:
 		sun-slideIn 3s ease,
